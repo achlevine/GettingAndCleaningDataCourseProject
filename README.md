@@ -1,4 +1,4 @@
-GettingAndCleaningDataCourseProject
+# GettingAndCleaningDataCourseProject
 ===================================
 
 This repository contains the files for the Course Project for the Getting and Cleaning Data Coursera course
@@ -6,12 +6,13 @@ This repository contains the files for the Course Project for the Getting and Cl
 1.      README.md:  contains an overview, the study description and list of related documents
 2.      run_analysis.R: master script that takes the downloaded data and creates a tidy data file with a row for each observation by Subject and Activity.  The observations are the mean of the mean and standard deviation values from the original dataset, for each Subject and Activity.
 3.      tidyData.txt:  the data file produced by the run_analysis.R script
+4.      codebook.docx:  A file with a detailed description of the project, the script, and a CODEBOOK contianing the description of the tidyData.txt output data set.
 
-STARTING CONDITIONS:
+## STARTING CONDITIONS:
         1.  Set your working directory to the directory you will run the run_analysis.R file from. Place the run_analysis.R script in this directory. The run_analysis script will create a ./data subdirectory under the working directory it is run in, and will download the original zip file containing the datasets and related files from the SAMSUNG study to that subdirectory.   It will then extract the zip files into a subdirectory titled "UCI HAR Dataset".    The output of the script will be a text file in the ./data directory named tidyData.txt
         
         
-Script tasks:
+## Script tasks:
 
 The run_analysis.R script accomplishes the following tasks:
 
@@ -20,8 +21,15 @@ The run_analysis.R script accomplishes the following tasks:
  3.Uses descriptive activity names to name the activities in the data set
  4.Appropriately labels the data set with descriptive variable names. 
  5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-BACKGROUND and SOURCE DATA:
+ 
+## THE OUTPUT DATA IS TIDY:
+ 
+ * Observations are by Subject and Activity.   Each observation is it's own row in the data
+ * Variable names for each observation are in their own columns
+ * A header row exists with descriptive names for each key and variable.
+ * Variable names are descriptive, do not use abbreviations or special punctuation.  For readability, capital letters were preserved in the variable names at the start of each word.
+ 
+## BACKGROUND and SOURCE DATA://
 
 One of the most exciting areas in all of data science right now is 
  wearable computing - see for example  this article . Companies like Fitbit,
