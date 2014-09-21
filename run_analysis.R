@@ -26,13 +26,12 @@ library(plyr)
 library(dplyr)
 library(reshape2)  ## reshape2 used for the melt commands
 ##
-## Set working Directory and make sure the ./data directory exists
+## Set working Directory to the directory where the run_analysis.R file resides
+## The script will make sure the ./data directory exists and
 ## download the zip file containing the data and save to the ./data directory
 ## be sure to use mode = "wb" to treat as a binary file on Windows
 ## then unzip the file
 
-## THIS SHOULD BE REMOVED
-setwd("C:/Users/aclevine/OneDrive/Courses and Classes/Getting and Cleaning Data Johns Hopkins University 2014-09/Course Project")
 
 if(!file.exists("./data")) {dir.create("./data")}
 
