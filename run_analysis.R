@@ -131,6 +131,8 @@ vNames <- names(tidyData)
         vNames <- sub("\\.\\.\\.Z$", "Zaxis", vNames)
         #7.  Remove any trailing periods
         vNames <- (sub("\\.\\.$", "", vNames))
+        #8.  Remove any remaining periods
+        vNames <- (sub("\\.", "", vNames))
 
         names(tidyData) <- vNames
 
@@ -138,3 +140,5 @@ vNames <- names(tidyData)
 setwd("../")
 write.table(tidyData, file = "tidyData.txt", sep = " ", row.names = FALSE)
 
+#reset to original working directory
+setwd("..")
