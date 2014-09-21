@@ -36,10 +36,10 @@ library(reshape2)  ## reshape2 used for the melt commands
 if(!file.exists("./data")) {dir.create("./data")}
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-#download.file(fileUrl, destfile = "./data/UCI HAR Dataset.zip", mode = "wb") 
+download.file(fileUrl, destfile = "./data/UCI HAR Dataset.zip", mode = "wb") 
 
 setwd("./data")
-#unzip("./UCI HAR Dataset.zip")
+unzip("./UCI HAR Dataset.zip")
 
 setwd("./UCI HAR Dataset")
 
@@ -129,9 +129,9 @@ vNames <- names(tidyData)
         vNames <- sub("\\.\\.\\.Y$", "Yaxis", vNames)
         vNames <- sub("\\.\\.\\.Z$", "Zaxis", vNames)
         #7.  Remove any trailing periods
-        vNames <- (sub("\\.\\.$", "", vNames))
+        vNames <- sub("\\.\\.$", "", vNames)
         #8.  Remove any remaining periods
-        vNames <- (sub("\\.", "", vNames))
+        vNames <- gsub("\\.", "", vNames)
 
         names(tidyData) <- vNames
 
